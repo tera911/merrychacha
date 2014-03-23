@@ -1,6 +1,36 @@
 <html>
 <head>
 <meta charset=utf-8>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		var storage = localStorage;
+		//カーソルが離れた時にstoreに保存する。
+		$('td').blur(function(){
+				//indexを取得する
+				var index = $(this).parent().children('td').index(this);
+				var itemId = $(this).parent().children('td:nth-child(2)').text();
+				var key = itemId + "-" + index;
+				var text = $($(this).parent().children('td')[index]).text();
+				if(index != 3){
+					storage.setItem(key, text);
+				}
+		});
+		//ページを開いたときにデータをロードする.
+		function dataLoad(){
+			$('td:nth-child(2)').each(function(){
+				var itemId = $(this).text();
+				for(i = 0; i < 7; i++){
+					var text = storage.getItem(itemId + "-" + i);
+					if(text != null){
+						$($(this).parent().children()[i]).text(text);
+					}
+				}
+			});
+		}
+		dataLoad();
+	});
+</script>
 <style>
 table{
 	border:0px solid #000;

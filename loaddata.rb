@@ -3,16 +3,19 @@
 
 require "csv"
 
+# パスを指定してcsvをロードする
 def loadCSV(filename)
 	csv = CSV.read(filename, encoding: "SJIS:UTF-8")
 	return csv
 end
 
+# CSVを書き込む
 def writeCSV(arr, filename)
 	CSV.open(filename, 'w') do |writer|
 		arr.each{|row| writer << row}
 	end
 end
+# CSV用の配列から文字を検索する
 def search(csv, word)
 	i = 0
 	csv.each_with_index do |row, index|
@@ -29,13 +32,16 @@ def search(csv, word)
 	p i
 end
 
+# 花（マリメッコ系）の商品を削除
 def remove_flower(csv)
 	csv.each_with_index do |row, index|
 		if row[9] != nil && row[9] =~ /flower/ then
 			csv.delete_at(index)
-		end	
+		end
 	end
 end
+
+# 古い（卸先が使ってる）商品コードに妥当する商品を削除
 def remove_oldcode(csv, pattern)
 	index = -1
 	index =	csv.find_index {|item| item[2] =~ /#{pattern}/}
@@ -44,13 +50,14 @@ def remove_oldcode(csv, pattern)
 		csv.delete_at(index)
 	end
 end
+# 商品コードをすべて表示する。
 def viewCode(csv)
 	csv.each_with_index do |row, index|
 		p row[2]  +"   :" + index.to_s
 
 	end
 end
-
+# 自社で使う商品コードに変換する
 def setCode(csv, start)
 	csv.each_with_index do |row, index|
 		if index == 0 then next end
@@ -58,12 +65,12 @@ def setCode(csv, start)
 		start = start + 1
 	end
 end
-
+# 商品説明文から画像パスを取得する。（現在は使用されていない）
 def getImageFileName(row)
 	text = row[9][0..150]
 	start = text =~ /http\:\/\/lib2\.shopping\.srv\.yimg\.jp\/lib\//
-	if start == nil then 
-		return nil 
+	if start == nil then
+		return nil
 	end
 	text = text[start + 51 ..150]
 	if text == nil then
@@ -73,6 +80,8 @@ def getImageFileName(row)
 	path = text.scan /\S*\.jpg/
 	return path
 end
+
+# 画像のなめからimgタグを作成する。
 def createImageTag(filename)
 	path = Dir::glob("./pictures/" << filename.downcase << "*")
 	if path.length > 5 then
@@ -89,11 +98,12 @@ def createImageTag(filename)
 	img << "\" width=\"100px\" height=\"100px\"></img>"
 	return img
 end
+# カテゴリをまとめたファイルを作る(html)
 def generateCatalog(csv)
 	File.delete("catalog.html")
 	File.open("catalog.html", "w") do |file|
-		file.write File.open("head.m","r").read 
-		
+		file.write File.open("head.m","r").read
+
 		csv.each_with_index do |row, index|
 			if index == 0 then
 				next
@@ -115,7 +125,7 @@ def generateCatalog(csv)
 		end
 
 		file.write File.open("foot.m", "r").read
-	end	
+	end
 end
 def main()
 	csv = loadCSV("data.csv")
