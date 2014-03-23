@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 require "csv"
+require "Base64"
 
 # パスを指定してcsvをロードする
 def loadCSV(filename)
@@ -64,6 +65,12 @@ def setCode(csv, start)
 		row[200] = start
 		start = start + 1
 	end
+	if start % 8 != 0 then
+		count = (start % 8) - 1;
+		count.times do
+			csv.push ["","","","","","","","","","","","","","","","","","","",""]
+		end
+	end
 end
 # 商品説明文から画像パスを取得する。（現在は使用されていない）
 def getImageFileName(row)
@@ -108,8 +115,12 @@ def generateCatalog(csv)
 			if index == 0 then
 				next
 			end
+			if (index - 1 ) % 8 == 0 then
+				if index  >= 8 then
+					file.write "</table>"
+				end
+			end
 			if (index - 1) % 8 == 0 then
-				file.write "</table>"
 				file.write "<table>"
 			end
 	file.write "<tr>"

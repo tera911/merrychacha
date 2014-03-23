@@ -20,6 +20,9 @@
 		function dataLoad(){
 			$('td:nth-child(2)').each(function(){
 				var itemId = $(this).text();
+				if(itemId == ""){
+					return;
+				}
 				for(i = 0; i < 7; i++){
 					var text = storage.getItem(itemId + "-" + i);
 					if(text != null){
@@ -39,13 +42,12 @@ table{
 	height:1060px;
 	page-break-after:always;
 	margin-bottom:30px;
+	table-layout:fixed;
 }
 td{
 	border:1.5px solid #000;
 	margin:0;
 	text-align:center;
-table-layout: fixed;
-
 }
 tr{
 	height:12.5%;
