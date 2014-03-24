@@ -165,7 +165,7 @@ def main()
 	remove_flower(csv)
 	remove_flower(csv)
 	#既存の商品を削除
-	remove_items = ["portable-led-battery", "iphone-cube", "iPhone5-quilt-book", "iPhone-nail"]
+	remove_items = ["portable-led-battery", "iphone-cube", "iPhone5-quilt-book", "iPhone-nail","iphone5-steven","iphone5-arm"]
 	remove_items.each do |s|
 		remove_oldcode(csv, s)
 	end
@@ -174,5 +174,6 @@ def main()
 	remove_noImageData(csv)
 	remove_noImageData(csv)
 	setCode(csv, 2175)
+	generateCatalog(csv)
 	return csv
 end

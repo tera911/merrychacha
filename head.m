@@ -15,6 +15,9 @@
 				if(index != 3){
 					storage.setItem(key, text);
 				}
+				if(text == ""){
+					storage.removeItem(key);
+				}
 		});
 		//ページを開いたときにデータをロードする.
 		function dataLoad(){
@@ -48,6 +51,7 @@ td{
 	border:1.5px solid #000;
 	margin:0;
 	text-align:center;
+	height: 141px;
 }
 tr{
 	height:12.5%;
