@@ -11,7 +11,7 @@
 				var index = $(this).parent().children('td').index(this);
 				var itemId = $(this).parent().children('td:nth-child(2)').text();
 				var key = itemId + "-" + index;
-				var text = $($(this).parent().children('td')[index]).text();
+				var text = $($(this).parent().children('td')[index]).html();
 				if(index != 3){
 					storage.setItem(key, text);
 				}
@@ -26,7 +26,7 @@
 				for(i = 0; i < 7; i++){
 					var text = storage.getItem(itemId + "-" + i);
 					if(text != null){
-						$($(this).parent().children()[i]).text(text);
+						$($(this).parent().children()[i]).html(text);
 					}
 				}
 			});

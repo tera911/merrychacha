@@ -51,6 +51,17 @@ def remove_oldcode(csv, pattern)
 		csv.delete_at(index)
 	end
 end
+
+def remove_noImageData(csv)
+	csv.each_with_index do |row, index|
+		if index == 0 then 
+			next	
+		end
+		if !checkImage(row[2]) then
+			csv.delete_at(index)
+		end
+	end
+end
 # 商品コードをすべて表示する。
 def viewCode(csv)
 	csv.each_with_index do |row, index|
@@ -66,7 +77,7 @@ def setCode(csv, start)
 		start = start + 1
 	end
 	if start % 8 != 0 then
-		count = (start % 8) - 1;
+		count = 8 - (start % 8) - 1;
 		count.times do
 			csv.push ["","","","","","","","","","","","","","","","","","","",""]
 		end
@@ -87,7 +98,15 @@ def getImageFileName(row)
 	path = text.scan /\S*\.jpg/
 	return path
 end
-
+# 画像があるかどうかを確認する
+def checkImage(filename)
+	path = Dir::glob("./pictures/" << filename.downcase << "*")
+	if path.length > 5 || path.length == 0 then
+		return false	
+	else
+		return true
+	end
+end
 # 画像のなめからimgタグを作成する。
 def createImageTag(filename)
 	path = Dir::glob("./pictures/" << filename.downcase << "*")
@@ -107,7 +126,9 @@ def createImageTag(filename)
 end
 # カテゴリをまとめたファイルを作る(html)
 def generateCatalog(csv)
-	File.delete("catalog.html")
+	if File.exists?("catalog.html") then
+		File.delete("catalog.html")
+	end
 	File.open("catalog.html", "w") do |file|
 		file.write File.open("head.m","r").read
 
@@ -148,6 +169,10 @@ def main()
 	remove_items.each do |s|
 		remove_oldcode(csv, s)
 	end
+	remove_noImageData(csv)
+	remove_noImageData(csv)
+	remove_noImageData(csv)
+	remove_noImageData(csv)
 	setCode(csv, 2175)
 	return csv
 end
