@@ -1,0 +1,24 @@
+javascript: (function(){
+    var d = document;
+    var s = d.createElement('script');
+    s.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js';
+    d.body.appendChild(s);
+    setTimeout(function(){
+    //Ç±Ç±Ç…ãLèq
+$('#auc_StartPrice').attr("value","790");
+$('#auc_BidOrBuyPrice').attr("value","1500");
+$('[name="ClosingDate"]').val("2");
+$('[name="ClosingTime"]').val("6");
+$('#istatus_new').attr("checked",true);
+$('[name="numResubmit"]').val("3");
+    }, 1000);
+})();
+
+
+javascript:(function(d){function l(){(function($){
+
+$('[name="ClosingDate"]').val("2");
+$('[name="ClosingTime"]').val("6");
+$('#istatus_new').attr("checked",true);
+$('[name="numResubmit"]').val("3");
+})(jQuery)}if(typeof jQuery=='undefined'){var j=d.createElement('script');j.type='text/javascript';j.src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';d.body.appendChild(j);j.onload=l}else{l()}})(document);
