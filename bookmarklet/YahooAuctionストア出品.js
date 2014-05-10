@@ -15,7 +15,7 @@ loadjs("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", function()
 		$('#use_ship_fee').click();
 		$('input[name=ship_fee_B1]').attr('checked',true);
 		$('input[name=cod_fee]:first').click();
-	}
+	};
 
 	window.init_win(jQuery);
 });
@@ -38,7 +38,7 @@ loadjs("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js", funct
 				}
 			}
 		});
-	}
+	};
 	window.init_win1(jQuery);
 });
 loadcss("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css");
