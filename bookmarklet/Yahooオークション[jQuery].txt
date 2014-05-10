@@ -4,7 +4,7 @@ javascript: (function(){
     s.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js';
     d.body.appendChild(s);
     setTimeout(function(){
-    //‚±‚±‚É‹Lq
+    //ã“ã“ã«è¨˜è¿°
 $('#auc_StartPrice').attr("value","790");
 $('#auc_BidOrBuyPrice').attr("value","1500");
 $('[name="ClosingDate"]').val("2");

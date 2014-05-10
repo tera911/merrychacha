@@ -17,43 +17,44 @@ function init(){
 	$('#use_ship_fee').click();
 	$('input[name=ship_fee_B1]').attr('checked',true);
 	$('input[name=cod_fee]:first').click();
-	init2();
+
 }
 function init2(){
-  var dialogBox = $('<div id="dialog-form"><form><table id="form1" class="sample"><tr><td><label>¤•i”Ô†</label><input type="text" class="number" name="number" value="" size="10" maxlength="4"></td></tr><tr><td><label>ƒ^ƒCƒgƒ‹</label><input type="text" class="title" name="title" value="" size="60"></td></tr><tr><td><label>à–¾</label><textarea class="description" name="description" value="" cols="60" rows="10"></textarea></td></tr><tr><td><label>‰¿Ši</label><input type="text" class="price" name="price" value="" size="10" maxlength="10"><label>‘¦Œˆ</label><input type="text" class="buy_price" name="buy_price" value="" size="10" maxlength="10"></td></tr><tr><td><label>ƒXƒgƒA“àŒŸõ</label><select name="category" class="category"><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“</option><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“.ƒoƒbƒO</option><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“.¬•¨EŽG‰Ý</option><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“.ŒCEƒTƒ“ƒ_ƒ‹</option><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“.à•z</option><option>ƒŒƒfƒB[ƒXƒtƒ@ƒbƒVƒ‡ƒ“.•žEƒR[ƒg</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.ƒoƒbƒO</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.¬•¨EŽG‰Ý</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.à•z</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.ƒL[ƒP[ƒX</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.ŒCEƒTƒ“ƒ_ƒ‹</option><option>ƒƒ“ƒYƒtƒ@ƒbƒVƒ‡ƒ“.ƒrƒWƒlƒXƒoƒbƒO</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.ƒuƒŒƒXƒŒƒbƒg</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.ƒlƒbƒNƒŒƒX</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.˜rŽžŒv</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.ŽžŒvƒP[ƒX</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.ƒsƒAƒX</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.Žw—Ö</option><option>ƒAƒNƒZƒTƒŠ[E˜rŽžŒv.UZU/ƒEƒY</option><option>”ü—eEŒ’N</option><option>”ü—eEŒ’N.Œ’NEƒgƒŒ[ƒjƒ“ƒO‹@Ší</option><option>”ü—eEŒ’N.Œ’NH•i</option><option>‰Æ“dEAV‹@Ší</option><option>‰Æ“dEAV‹@Ší.ƒLƒbƒ`ƒ“‰Æ“d</option><option>‰Æ“dEAV‹@Ší.¶Šˆ‰Æ“d</option><option>‰Æ“dEAV‹@Ší.ƒI[ƒfƒBƒI‰Æ“d</option><option>‰Æ“dEAV‹@Ší.Æ–¾‹@Ší</option><option>‰Æ“dEAV‹@Ší.DIYH‹ï</option><option>‰Æ“dEAV‹@Ší.ƒXƒ}[ƒgƒtƒHƒ“ƒP[ƒX</option><option>“ú—p•iŽG‰Ý</option><option>“ú—p•iŽG‰Ý.ƒLƒbƒ`ƒ“—p•i</option><option>“ú—p•iŽG‰Ý.‘|œ—p‹ï</option><option>“ú—p•iŽG‰Ý.–h”ÆƒOƒbƒY</option><option>“ú—p•iŽG‰Ý.“ú—p•iŽG‰Ý</option><option>“ú—p•iŽG‰Ý.ƒwƒAƒPƒA—p•i</option><option>ƒCƒ“ƒeƒŠƒA</option><option>ƒJ[EŽ©“]ŽÔ—p•i</option><option>Šß‹ï</option><option>ƒMƒtƒg</option></select></td></tr></table></form></div>');
+  var dialogBox = $('<div id="dialog-form"><form><table id="form1" class="sample"><tr><td><label>å•†å“ç•ªå·</label><input type="text" class="number" name="number" value="" size="10" maxlength="4"></td></tr><tr><td><label>ã‚¿ã‚¤ãƒˆãƒ«</label><input type="text" class="title" name="title" value="" size="60"></td></tr><tr><td><label>èª¬æ˜Ž</label><textarea class="description" name="description" value="" cols="60" rows="10"></textarea></td></tr><tr><td><label>ä¾¡æ ¼</label><input type="text" class="price" name="price" value="" size="10" maxlength="10"><label>å³æ±º</label><input type="text" class="buy_price" name="buy_price" value="" size="10" maxlength="10"></td></tr><tr><td><label>ã‚¹ãƒˆã‚¢å†…æ¤œç´¢</label><select name="category" class="category"><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³</option><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.ãƒãƒƒã‚°</option><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.å°ç‰©ãƒ»é›‘è²¨</option><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.é´ãƒ»ã‚µãƒ³ãƒ€ãƒ«</option><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.è²¡å¸ƒ</option><option>ãƒ¬ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.æœãƒ»ã‚³ãƒ¼ãƒˆ</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.ãƒãƒƒã‚°</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.å°ç‰©ãƒ»é›‘è²¨</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.è²¡å¸ƒ</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.ã‚­ãƒ¼ã‚±ãƒ¼ã‚¹</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.é´ãƒ»ã‚µãƒ³ãƒ€ãƒ«</option><option>ãƒ¡ãƒ³ã‚ºãƒ•ã‚¡ãƒƒã‚·ãƒ§ãƒ³.ãƒ“ã‚¸ãƒã‚¹ãƒãƒƒã‚°</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.ãƒ–ãƒ¬ã‚¹ãƒ¬ãƒƒãƒˆ</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.ãƒãƒƒã‚¯ãƒ¬ã‚¹</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.è…•æ™‚è¨ˆ</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.æ™‚è¨ˆã‚±ãƒ¼ã‚¹</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.ãƒ”ã‚¢ã‚¹</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.æŒ‡è¼ª</option><option>ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ãƒ»è…•æ™‚è¨ˆ.UZU/ã‚¦ã‚º</option><option>ç¾Žå®¹ãƒ»å¥åº·</option><option>ç¾Žå®¹ãƒ»å¥åº·.å¥åº·ãƒ»ãƒˆãƒ¬ãƒ¼ãƒ‹ãƒ³ã‚°æ©Ÿå™¨</option><option>ç¾Žå®¹ãƒ»å¥åº·.å¥åº·é£Ÿå“</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.ã‚­ãƒƒãƒãƒ³å®¶é›»</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.ç”Ÿæ´»å®¶é›»</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªå®¶é›»</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.ç…§æ˜Žæ©Ÿå™¨</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.DIYå·¥å…·</option><option>å®¶é›»ãƒ»AVæ©Ÿå™¨.ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚±ãƒ¼ã‚¹</option><option>æ—¥ç”¨å“é›‘è²¨</option><option>æ—¥ç”¨å“é›‘è²¨.ã‚­ãƒƒãƒãƒ³ç”¨å“</option><option>æ—¥ç”¨å“é›‘è²¨.æŽƒé™¤ç”¨å…·</option><option>æ—¥ç”¨å“é›‘è²¨.é˜²çŠ¯ã‚°ãƒƒã‚º</option><option>æ—¥ç”¨å“é›‘è²¨.æ—¥ç”¨å“é›‘è²¨</option><option>æ—¥ç”¨å“é›‘è²¨.ãƒ˜ã‚¢ã‚±ã‚¢ç”¨å“</option><option>ã‚¤ãƒ³ãƒ†ãƒªã‚¢</option><option>ã‚«ãƒ¼ãƒ»è‡ªè»¢è»Šç”¨å“</option><option>çŽ©å…·</option><option>ã‚®ãƒ•ãƒˆ</option></select></td></tr></table></form></div>');
 dialogBox.dialog({
-width:700,
-position:"top",
-buttons:{
-"OK":function(){
+	width:700,
+	position:"top",
+	buttons:{
+		"OK":function(){
 
-$('#auc_merchant').val($('#dialog-form .number').val());
-$('textarea[name=Description_plain]').text('<CENTER><TABLE WIDTH=500><TR><TD><FONT color="#330000"><b>'+$('#dialog-form .title').val()+'</b></FONT><HR><TABLE CELLPADDING=15><TR><TD><FONT COLOR=#663300 SIZE=3>'+$('#dialog-form .description').val()+'</FONT></TD></TR></TABLE></TD></TR></TABLE></CENTER>');
-$('input[name=start_price]').val($('#dialog-form .price').val());
-$('input[name=buy_price]').val($('#dialog-form .buy_price').val());
-$('#auc_search_words').val($('#dialog-form .category').val());
+		$('#auc_merchant').val($('#dialog-form .number').val());
+		$('textarea[name=Description_plain]').text('<CENTER><TABLE WIDTH=500><TR><TD><FONT color="#330000"><b>'+$('#dialog-form .title').val()+'</b></FONT><HR><TABLE CELLPADDING=15><TR><TD><FONT COLOR=#663300 SIZE=3>'+$('#dialog-form .description').val()+'</FONT></TD></TR></TABLE></TD></TR></TABLE></CENTER>');
+		$('input[name=start_price]').val($('#dialog-form .price').val());
+		$('input[name=buy_price]').val($('#dialog-form .buy_price').val());
+		$('#auc_search_words').val($('#dialog-form .category').val());
 
-$(this).dialog('close');
-}
-}
+		$(this).dialog('close');
+		}
+	}
 });
 }
-
 function loadjs(url){
     d = document.createElement('script');
     d.src = url;
     d.type = "text/javascript";
+		d.defer = true;
+		d.onload = function(){
+			console.log(url + ": script is loaded.");
+			console.log($().jquery);
+		}
     document.head.appendChild(d);
-
 }
 function loadcss(url){
     d = document.createElement('link');
     d.href = url;
     d.rel = "stylesheet";
     document.head.appendChild(d);
-	d.onload = function(){
-		init();
-	}
 }
+
 
 })();

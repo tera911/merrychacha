@@ -3,15 +3,15 @@ if(document.domain.match(/store.yahoo.co.jp/) == null){
 	return;
 }
 var searchUrl = "http://store.shopping.yahoo.co.jp/chachamerry/search.html?p=";
-var text = window.prompt("ŒŸõ‚·‚éƒ[ƒh‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+var text = window.prompt("æ¤œç´¢ã™ã‚‹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 
-//var text = "(‚©‚Î‚ñ)";
+//var text = "(ã‹ã°ã‚“)";
 searchUrl = searchUrl + encodeURI('('+text+')');
-//Ajax‚Åæ“¾
+//Ajaxã§å–å¾—
 var req = new XMLHttpRequest();
 req.open("GET", searchUrl ,false);
 req.send();
-//æ“¾‚µ‚½ƒf[ƒ^‚©‚çDOM\’z
+//å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿ã‹ã‚‰DOMæ§‹ç¯‰
 var d = document.createElement('html');
 d.innerHTML = req.responseText;
 Array.prototype.forEach.call(document.querySelectorAll('input[name^=hotitem]'), function(e){e.value = ""});
